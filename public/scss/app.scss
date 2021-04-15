@@ -1,24 +1,5 @@
-/* Fonts 
- * ========================================================================== */
-@font-face {
-    font-family: 'Montserrat';
-    src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url("../fonts/Montserrat-Light.ttf") format("truetype");
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
-    font-weight: 700;
-}
-
-
+@import 'partials/fonts';
+@import 'partials/vars';
 
 /* General & Variables 
  * ========================================================================== */
@@ -29,11 +10,7 @@
 
 }
 
-$cd-txt: #6300a0;
-$cd-box: #c099d8;
-$cd-txt--invalid: #fff;
-$cd-danger: #b20a37;
-$cd-primary:#011c37;
+
 
 * {
     box-sizing: border-box;
@@ -124,4 +101,22 @@ h1:first-child {
     &:hover {
         transform: scale(1.15);
     }
+
+    &:active+.ball {
+        transform: scale(1.15);
+    }
+}
+
+$ball-size: 200px;
+$cd-secondary: rgb(180, 248, 22);
+
+.ball {
+    width: $ball-size;
+    height: $ball-size;
+    background: linear-gradient(#f69d3c, #e4f0f5);
+    margin-bottom: 1rem;
+    border-radius: $ball-size * 0.5;
+    margin: 0 auto;
+    transform: scale(0.1);
+    transition: transform 4000ms;
 }

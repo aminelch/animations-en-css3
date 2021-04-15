@@ -98,5 +98,19 @@ h1:first-child {
 .btn:hover {
   transform: scale(1.15);
 }
+.btn:active + .ball {
+  transform: scale(1.15);
+}
+
+.ball {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(#f69d3c, #e4f0f5);
+  margin-bottom: 1rem;
+  border-radius: 100px;
+  margin: 0 auto;
+  transform: scale(0.1);
+  transition: transform 4000ms;
+}
 
 /*# sourceMappingURL=app.css.map */
