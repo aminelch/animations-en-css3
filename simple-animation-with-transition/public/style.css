@@ -11,7 +11,7 @@
  *::before {
      margin: 0;
      padding: 0;
-     box-sizing: inherit;
+     box-sizing: border-box;
  }
 
  html {
@@ -22,7 +22,7 @@
      box-sizing: border-box;
      background: #fff;
      color: var(--cd-txt);
-
+     border: 2px solid steelblue;
      height: 100%;
      font-family: 'Montserrat', sans-serif;
  }
@@ -46,4 +46,21 @@
 
  .btn:hover {
      transform: scale(1.02);
+ }
+
+ p {
+     border: solid red;
+
+     -webkit-transform: translate(100px) rotate(20deg);
+     -webkit-transform-origin: 0 -250px;
+
+     transform: translate(100px) rotate(20deg);
+     transform-origin: 0 -250px;
+     transition-duration: 0.3s;
+ }
+
+
+ p:fullscreen {
+     transform: translate(100px) rotate(0deg);
+     transform-origin: 0 0;
  }
