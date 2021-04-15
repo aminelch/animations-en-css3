@@ -18,7 +18,9 @@
     font-weight: 700;
 }
 
-/* General 
+
+
+/* General & Variables 
  * ========================================================================== */
 :root {
 
@@ -27,6 +29,11 @@
 
 }
 
+$cd-txt: #6300a0;
+$cd-box: #c099d8;
+$cd-txt--invalid: #fff;
+$cd-danger: #b20a37;
+$cd-primary:#011c37;
 
 * {
     box-sizing: border-box;
@@ -64,4 +71,57 @@ h1:first-child {
     border-top: none;
     width: 90%;
     margin: 0 auto;
+}
+
+
+
+.form {
+    &__group {
+        margin-bottom: 10px;
+
+        & label {
+            padding: 10px 0 0 25px;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        & input {
+            border: 2px solid $cd-box;
+            border-radius: 100rem;
+            color: $cd-txt;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            outline: none;
+            padding: .5rem 1.5rem;
+            width: 70%;
+            transition: background-color 500ms;
+
+            &:focus {
+                border: 2px solid $cd-txt;
+            }
+
+            &:not(:focus):invalid {
+                color: $cd-txt--invalid;
+                border: 2px solid $cd-danger;
+                background: $cd-danger;
+            }
+        }
+    }
+}
+
+
+.btn {
+    background: $cd-primary;
+    font-size: 1.5rem;
+    color: wheat;
+    cursor: pointer;
+    padding: 0.43rem 1.5rem;
+    border-radius: 10rem;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.15);
+    }
 }
