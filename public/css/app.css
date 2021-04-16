@@ -18,6 +18,52 @@
 /**
 Button
 ================================*/
+/* Animer en utilisant la propoerty transform 
+ * ========================================================================== */
+.text-center {
+  text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.g1 {
+  position: relative;
+  width: 100%;
+  border: 1px solid yellow;
+  min-height: 500px;
+}
+.g1 .g1-div {
+  height: 200px;
+  width: 200px;
+  background: #53d328;
+  border: 1px solid #2a7906;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  position: absolute;
+  margin: 0 auto;
+}
+.g1 .btn-transform {
+  position: absolute;
+  top: calc(50% + 150px);
+  left: calc(50% - 50px);
+  background: linear-gradient(#e66465, #9198e5);
+  padding: 10px 8px;
+  color: #090808;
+  cursor: pointer;
+  border-radius: 20%;
+  transform: scale(1);
+  transition: scale ease-in 1s, color ease-in-out 0.3s;
+}
+.g1 .btn-transform:hover {
+  color: #d1f186;
+  transform: scale(1.2);
+}
+.g1 .btn-transform:active + .btn-transform {
+  background: red;
+}
+
 /* General & Variables 
  * ========================================================================== */
 :root {

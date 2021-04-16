@@ -1,0 +1,56 @@
+/* Animer en utilisant la propoerty transform 
+ * ========================================================================== */
+.text-center {
+    text-align: center;
+}
+
+
+.title {
+    text-transform: uppercase;
+}
+
+.g1 {
+    position: relative;
+    width: 100%;
+    border: 1px solid yellow;
+    min-height: 500px;
+
+    .g1-div {
+        height: 200px;
+        width: 200px;
+        background: rgb(83, 211, 40);
+        border: 1px solid rgb(42, 121, 6);
+        top: calc(50% - 100px);
+        left: calc(50% - 100px);
+        position: absolute;
+        margin: 0 auto;
+
+
+
+    }
+
+    .btn-transform {
+
+        position: absolute;
+        top: calc(50% + 150px);
+        left: calc(50% - 50px);
+        background: linear-gradient(#e66465, #9198e5);
+        padding: 10px 8px;
+        color: rgb(9, 8, 8);
+        cursor: pointer;
+        border-radius: 20%;
+        transform: scale(1);
+        transition: scale ease-in 1s, color ease-in-out 0.3s;
+
+        &:hover {
+            color: rgb(209, 241, 134);
+            transform: scale(1.2);
+        }
+
+        &:active+.btn-transform {
+            background: red;
+        }
+    }
+
+
+}
