@@ -90,13 +90,14 @@ h1:first-child {
 
 
 .btn {
-    background: $cd-primary;
+    background: #5555a8;
     font-size: 1.5rem;
     color: wheat;
     cursor: pointer;
     padding: 0.43rem 1.5rem;
     border-radius: 10rem;
     transition: transform 0.3s;
+
 
     &:hover {
         transform: scale(1.15);
@@ -119,4 +120,84 @@ $cd-secondary: rgb(180, 248, 22);
     margin: 0 auto;
     transform: scale(0.1);
     transition: transform 4000ms;
+}
+
+hr {
+    padding: 0 5px;
+    width: 90%;
+    color: yellow;
+}
+
+.card {
+    padding: 20px 50px;
+}
+
+.btn2 {
+    background-color: $cd-btn-start;
+    border: 2px solid $cd-btn;
+    border-radius: 5rem;
+
+    cursor: pointer;
+    font-size: 24px;
+    text-align: center;
+    padding: 1rem 20px;
+    min-height: 40px;
+    max-width: 20%;
+    //    transition: all 0.4s; //animer plusieurs properties simultanément 
+    transition: background-color 0.8s, transform 0.3s, color 1s;
+    transition-delay: 0, 150ms, 3s; //retarder la transition 
+
+    &:hover {
+        transform: scale(1.13);
+        background-color: $cd-btn-end;
+        color: wheat;
+    }
+}
+
+
+.btn {
+
+    &:active+.rocket {
+
+        transform: translateY(0%);
+
+    }
+
+}
+
+
+
+.btn-launch {
+    height: auto;
+    width: auto;
+    padding: 10px;
+    background: $cd-btn;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    opacity: 0.7;
+    scale: 1;
+    transition: opacity 0.3s ease-in-out, scale 0.4ms;
+    text-align: center;
+
+    &:active+.rocket {
+
+        transform: translateY(0%);
+
+    }
+
+    &:hover {
+        scale: 1.2;
+        opacity: 1;
+    }
+
+}
+
+
+.rocket {
+    height: 64px;
+    width: 44px;
+    //   margin: 0 auto;
+    background: url(../img/rocket.png) top left no-repeat;
 }

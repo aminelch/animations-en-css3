@@ -15,6 +15,9 @@
   src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
   font-weight: 700;
 }
+/**
+Button
+================================*/
 /* General & Variables 
  * ========================================================================== */
 :root {
@@ -87,7 +90,7 @@ h1:first-child {
 }
 
 .btn {
-  background: #011c37;
+  background: #5555a8;
   font-size: 1.5rem;
   color: wheat;
   cursor: pointer;
@@ -111,6 +114,67 @@ h1:first-child {
   margin: 0 auto;
   transform: scale(0.1);
   transition: transform 4000ms;
+}
+
+hr {
+  padding: 0 5px;
+  width: 90%;
+  color: yellow;
+}
+
+.card {
+  padding: 20px 50px;
+}
+
+.btn2 {
+  background-color: rgba(1, 28, 55, 0);
+  border: 2px solid #011c37;
+  border-radius: 5rem;
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+  padding: 1rem 20px;
+  min-height: 40px;
+  max-width: 20%;
+  transition: background-color 0.8s, transform 0.3s, color 1s;
+  transition-delay: 0, 150ms, 3s;
+}
+.btn2:hover {
+  transform: scale(1.13);
+  background-color: #011c37;
+  color: wheat;
+}
+
+.btn:active + .rocket {
+  transform: translateY(0%);
+}
+
+.btn-launch {
+  height: auto;
+  width: auto;
+  padding: 10px;
+  background: #011c37;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  opacity: 0.7;
+  scale: 1;
+  transition: opacity 0.3s ease-in-out, scale 0.4ms;
+  text-align: center;
+}
+.btn-launch:active + .rocket {
+  transform: translateY(0%);
+}
+.btn-launch:hover {
+  scale: 1.2;
+  opacity: 1;
+}
+
+.rocket {
+  height: 64px;
+  width: 44px;
+  background: url(../img/rocket.png) top left no-repeat;
 }
 
 /*# sourceMappingURL=app.css.map */
